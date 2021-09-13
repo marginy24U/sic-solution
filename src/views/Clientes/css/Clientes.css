@@ -1,0 +1,36 @@
+.Padre{
+    min-height: 100vh;
+    width: auto;
+    display: flex;
+}
+.barra-top{
+    height: 40px;
+    z-index: 100;
+}
+
+.cajon{
+    margin-top: 100px;
+    max-width: 1000px;
+    transition: all ease-in-out .5s;
+    margin-left: 250px;
+}
+
+
+.cajon.centrado{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card{
+    max-width: 1000px;
+}
+
+@media screen and (max-width:600px) {
+    .cajon{
+        max-width: 100%;
+    }
+    
+    .card{
+        max-width: 100%;
+    }
+}

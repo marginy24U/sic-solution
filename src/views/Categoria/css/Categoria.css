@@ -1,0 +1,19 @@
+.Principal{
+    background-color: #E4E9F7;
+}
+.contenido{
+    padding-top: 80px;
+    padding-right: 50px;
+    width: calc(100% - 270px);
+    position: relative;
+    left: 260px;
+    transition: all .5s ease;
+  }
+  .contenido.desplegado{
+    left: 100px; 
+    width: calc(100% - 100px);
+  }
+
+  span.material-icons{
+    color:black;
+  }

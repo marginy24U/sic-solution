@@ -1,0 +1,20 @@
+/* background-color: #282c34; */
+
+/* Variables */
+:root{
+    /* fuentes */
+    --Titulo: 28px;
+    --SubTitulo: 24px;
+    --Encabezado: 22px;
+    --Cuerpo: 16px;
+    
+}
+/*span |*/
+ a{
+    color: whitesmoke;
+    text-decoration: none !important;   
+}
+
+h2{
+    font-family: Lato;
+}

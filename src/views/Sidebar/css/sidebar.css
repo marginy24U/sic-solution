@@ -1,0 +1,61 @@
+.lateral{
+    height: 100%;
+    width: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* Lista de enlaces */
+.menu{
+    background-color: rgb(5, 13, 25);
+    width: 200px;
+    transition: all .5s;
+}
+.menu.oculto{
+    width: 50px;
+    overflow: hidden;
+}
+
+/* Parte superior del menu */
+.logo{
+    width: 100px;
+}
+
+.user-img{
+    width: 100px;
+}
+a.active{
+    background-color: #0d6efd !important;
+}
+.menu.oculto .sec-logo{
+    opacity: 0;
+}
+.menu.oculto .sec-user{
+    display: none;
+}
+
+/* NavLinks - enlaces */
+.list-group-item{
+    height: 40px;
+}
+
+.list-group-item i{
+    font-size: 20px;
+    text-align: center;
+    width: 50px;
+}
+
+.menu.oculto .list-group-item {
+    height: 50px;
+}
+.menu.oculto .list-group-item i{
+    font-size: 22px;
+    text-align: center;
+    width: 50px;
+}
+
+.list-group-item .texto.oculto{
+    display: none;
+}
