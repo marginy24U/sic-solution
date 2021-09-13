@@ -29,7 +29,7 @@ function Login() {
     const iniciarSesion= async(e)=>{
         e.preventDefault();
         try {
-             const {data} = await axios.get(`https://54.161.143.47:8080/api/usuarios/${nick}/${pass}`)
+             const {data} = await axios.get(`https://regxipruebas.cloud/api/usuarios${nick}/${pass}`)
             //  const {data} = await axios.get(`http://localhost:3050/api/usuarios/${nick}/${pass}`)
             
                 if (data.status === 200) {
