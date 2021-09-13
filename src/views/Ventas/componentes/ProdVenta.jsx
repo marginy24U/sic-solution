@@ -57,7 +57,7 @@ const ProdVenta = ({ llenaCampos }) => {
         const getProductos = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://localhost:3050/api/productos/existance`);
+                const { data } = await axios.get(`https://localhost:3050/api/productos/existance`);
                 // const { data } = await axios.get(`http://54.161.143.47:8080/api/productos/existance`);
                 setListaProductos(data.rows);
                 setLoading(false);

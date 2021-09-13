@@ -62,7 +62,7 @@ const Clientes = () => {
         const getClientes = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/clientes/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/clientes/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/clientes/all`);
                 setListaClientes(data.rows);
                 setLoading(false);
@@ -82,7 +82,7 @@ const Clientes = () => {
     // //----------- Registrar----------------------
     const guardarC = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/clientes/`, cliente);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/clientes/`, cliente);
             //const { data } = await axios.post(`http://localhost:3050/api/clientes/`, cliente);
             if (data.status != 200) {
                 Swal.fire({
@@ -111,7 +111,7 @@ const Clientes = () => {
     // Editar Info Cliente
     const ActualizaC = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/clientes/${id_cliente}`, cliente);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/clientes/${id_cliente}`, cliente);
             // const { data } = await axios.put(`http://localhost:3050/api/clientes/${id_cliente}`, cliente);
             if (data.status != 200) {
                 Swal.fire({
@@ -140,7 +140,7 @@ const Clientes = () => {
     //Eliminar
     const deleteC = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/clientes/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/clientes/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/clientes/${id}`);
             if (data.status != 200) {
                 Swal.fire({

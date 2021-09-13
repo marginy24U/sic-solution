@@ -41,7 +41,7 @@ const Factura = ({ listaDetalles, sub, iva, factura, setFactura }) => {
             // setLoading(true);
             try {
                 // const { data } = await axios.get(`http://54.161.143.47:8080/api/clientes/all`);
-                const { data } = await axios.get(`http://localhost:3050/api/clientes/all`);
+                const { data } = await axios.get(`https://localhost:3050/api/clientes/all`);
                 setListaClientes(data.rows);
             } catch (error) {
                 console.log(error);
@@ -57,7 +57,7 @@ const Factura = ({ listaDetalles, sub, iva, factura, setFactura }) => {
     const guardarF = async (factura) => {
         try {
             // const { data } = await axios.post(`http://54.161.143.47:8080/api/clientes/`, cliente);
-            const { data } = await axios.post(`http://localhost:3050/api/ventas/`, factura);
+            const { data } = await axios.post(`https://localhost:3050/api/ventas/`, factura);
             if (data.status != 200) {
                 Swal.fire({
                     icon: 'error',

@@ -62,7 +62,7 @@ const Usuarios = () => {
         const getUsuarios = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/usuarios/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/usuarios/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/usuarios/all`);
                 setListaUsuarios(data.rows);
                 setLoading(false);
@@ -84,7 +84,7 @@ const Usuarios = () => {
                 
         try {
             // const nuevoUser = { nombre, apellido, nick, pass: md5(pass), cargo, permiso };
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/usuarios/`, usuario);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/usuarios/`, usuario);
             // const {data} = await axios.post(`http://localhost:3050/api/usuarios/`, nuevoUser);
             if (data.status != 200) {
                 Swal.fire({
@@ -112,7 +112,7 @@ const Usuarios = () => {
     // Editar Info Usuario
     const ActualizaU = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/usuarios/${id_usuario}`, usuario);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/usuarios/${id_usuario}`, usuario);
             // const { data } = await axios.put(`http://localhost:3050/api/usuarios/${id_usuario}`, usuario);
             if (data.status != 200) {
                 Swal.fire({
@@ -144,7 +144,7 @@ const Usuarios = () => {
     //----------- Eliminar ----------------------
     const deleteU = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/usuarios/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/usuarios/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/usuarios/${id}`);
             if (data.status != 200) {
                 Swal.fire({

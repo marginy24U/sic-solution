@@ -61,7 +61,7 @@ const Libro = () => {
         const getLibro = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/libro/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/libro/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/libro/all`);
                 setListaLibro(data.rows);
                 setLoading(false);
@@ -80,7 +80,7 @@ const Libro = () => {
     // //----------- Registrar----------------------
     const guardarL = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/libro/`, libro);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/libro/`, libro);
             //const { data } = await axios.post(`http://localhost:3050/api/libro/`, libro);
             if (data.status != 200) {
                 Swal.fire({
@@ -109,7 +109,7 @@ const Libro = () => {
     // Editar Info Proveedor
     const ActualizaL = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/libro/${id_libro}`, libro);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/libro/${id_libro}`, libro);
             // const { data } = await axios.put(`http://localhost:3050/api/libro/${id_libro}`, libro);
             if (data.status != 200) {
                 Swal.fire({
@@ -138,7 +138,7 @@ const Libro = () => {
     //Eliminar
     const deleteL = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/libro/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/libro/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/libro/${id}`);
             if (data.status != 200) {
                 Swal.fire({

@@ -58,7 +58,7 @@ const Proveedores = () => {
         const getProveedor = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/proveedores/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/proveedores/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/proveedores/all`);
                 setListaProveedores(data.rows);
                 setLoading(false);
@@ -77,7 +77,7 @@ const Proveedores = () => {
     // //----------- Registrar----------------------
     const guardarProv = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/proveedores/`, proveedor);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/proveedores/`, proveedor);
             //const { data } = await axios.post(`http://localhost:3050/api/proveedores/`, proveedor);
             if (data.status != 200) {
                 Swal.fire({
@@ -106,7 +106,7 @@ const Proveedores = () => {
     // Editar Info Proveedor
     const ActualizaProv = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/proveedores/${id_proveedor}`, proveedor);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/proveedores/${id_proveedor}`, proveedor);
             // const { data } = await axios.put(`http://localhost:3050/api/proveedores/${id_proveedor}`, proveedor);
             if (data.status != 200) {
                 Swal.fire({
@@ -135,7 +135,7 @@ const Proveedores = () => {
     //Eliminar
     const deleteProv = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/proveedores/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/proveedores/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/proveedores/${id}`);
             if (data.status != 200) {
                 Swal.fire({

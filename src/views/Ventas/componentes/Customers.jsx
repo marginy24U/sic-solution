@@ -35,7 +35,7 @@ const Customers = () => {
     // //----------- Registrar----------------------
     const guardarC = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/clientes/`, cliente);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/clientes/`, cliente);
             //const { data } = await axios.post(`http://localhost:3050/api/clientes/`, cliente);
             if (data.status != 200) {
                 Swal.fire({

@@ -59,7 +59,7 @@ const Materiales = () => {
         const getMateria = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/materia/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/materia/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/materia/all`);
                 setListaMateriales(data.rows);
                 setLoading(false);
@@ -78,7 +78,7 @@ const Materiales = () => {
     // //----------- Registrar----------------------
     const guardarM = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/materia/`, materia);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/materia/`, materia);
             //const { data } = await axios.post(`http://localhost:3050/api/materia/`, materia);
             if (data.status != 200) {
                 Swal.fire({
@@ -107,7 +107,7 @@ const Materiales = () => {
     // Editar Info Materia P
     const ActualizaM = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/materia/${id_materia}`, materia);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/materia/${id_materia}`, materia);
             // const { data } = await axios.put(`http://localhost:3050/api/materia/${id_materia}`, materia);
             if (data.status != 200) {
                 Swal.fire({
@@ -136,7 +136,7 @@ const Materiales = () => {
     //Eliminar
     const deleteM = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/materia/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/materia/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/materia/${id}`);
             if (data.status != 200) {
                 Swal.fire({

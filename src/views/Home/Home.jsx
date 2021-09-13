@@ -74,7 +74,7 @@ const Home = () => {
         const getProductos = async () => {
             setLoading(true);
             try {
-                const { data } = await axios.get(`http://54.161.143.47:8080/api/productos/all`);
+                const { data } = await axios.get(`https://54.161.143.47:8080/api/productos/all`);
                 // const { data } = await axios.get(`http://localhost:3050/api/productos/all`);
                 setListaProductos(data.rows)
                 setLoading(false);
@@ -92,7 +92,7 @@ const Home = () => {
     // //----------- Registrar----------------------
     const guardarP = async () => {
         try {
-            const { data } = await axios.post(`http://54.161.143.47:8080/api/productos/`, producto);
+            const { data } = await axios.post(`https://54.161.143.47:8080/api/productos/`, producto);
             // const { data } = await axios.post(`http://localhost:3050/api/productos/`, producto);
             if (data.status != 200) {
                 Swal.fire({
@@ -122,7 +122,7 @@ const Home = () => {
     // Editar Info Producto
     const ActualizaP = async () => {
         try {
-            const { data } = await axios.put(`http://54.161.143.47:8080/api/productos/${id_producto}`, producto);
+            const { data } = await axios.put(`https://54.161.143.47:8080/api/productos/${id_producto}`, producto);
             // const { data } = await axios.put(`http://localhost:3050/api/productos/${id_producto}`, producto);
             if (data.status != 200) {
                 Swal.fire({
@@ -151,7 +151,7 @@ const Home = () => {
     //Eliminar
     const deleteProd = async (id) => {
         try {
-            const { data } = await axios.delete(`http://54.161.143.47:8080/api/productos/${id}`);
+            const { data } = await axios.delete(`https://54.161.143.47:8080/api/productos/${id}`);
             // const { data } = await axios.delete(`http://localhost:3050/api/productos/${id}`);
             if (data.status != 200) {
                 Swal.fire({
